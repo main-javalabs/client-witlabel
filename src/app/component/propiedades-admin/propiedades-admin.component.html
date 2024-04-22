@@ -1,0 +1,32 @@
+<div class="outerContainer">
+    <br /><br />
+    <div class="container">
+      <div class="content" *ngFor="let propiedad of propiedades">
+        <div class="imageContainer">
+          <img [src]="propiedad.imagenUrl" alt="propiedad" width="170" height="100" class="imageWithBorderRadius" />
+        </div>
+        <div class="propertyInfo">
+          <h2 class="propertyName">{{ propiedad.nombre }}</h2>
+          <div class="propertyAddress">
+            <img src="/#" alt="icono" class="propertyImage" />
+            <p class="addressText">{{ propiedad.direccion }}</p>
+          </div>
+          <p class="tokenPrice">Precio del token: {{ propiedad.precioToken }} UDS</p>
+        </div>
+        <div class="tokenInfo">
+          <div class="tokenDetails">
+            <p class="tokenLabel">Token vendidos</p>
+            <span class="tokenValue">{{ propiedad.tokenVendidos }}</span>
+          </div>
+          <div class="tokenDetails">
+            <p class="tokenLabel">Token Faltante</p>
+            <span class="tokenValue">{{ propiedad.tokenFaltante }}</span>
+          </div>
+        </div>
+        <div class="buyTokensButton">
+          <button class="buyButton" (click)="verDetalles(propiedad)">Ver mas detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

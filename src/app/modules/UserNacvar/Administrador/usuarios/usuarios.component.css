@@ -1,0 +1,22 @@
+.container {
+    width: 94vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Dos filas */
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 10px; /* Espacio entre las celdas */
+    margin-left: 5%;
+  }
+  
+  .firstRow {
+    grid-column: 1 / span 2; /* Ocupa las dos columnas */
+    width: 94vw;
+  }
+  
+  .secondRow {
+    width: 94vw;
+    height: 100vh;
+    display: grid; /* Establece la segunda fila como una nueva cuadrícula */
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+  }
+  

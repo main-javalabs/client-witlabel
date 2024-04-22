@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="login">
+    <div class="loginContent">
+      <img src="url_del_logo" alt="Logo" class="logo" />
+      <h2 class="title">¡Bienvenido!</h2>
+      <h2 class="title">Gracias por elegirnos.</h2>
+      <p class="subtitle">¡Crea una cuenta en [Nombre de la Empresa]!</p>
+      <form [formGroup]="registrationForm" (ngSubmit)="handleSubmit()" class="registerForm">
+        <div *ngIf="!showPasswordFields">
+          <div class="formGroup">
+            <label for="name" class="label">Nombre y Apellido:</label>
+            <input type="text" id="name" formControlName="name" class="input" />
+          </div>
+          <div class="formGroup">
+            <label for="phone" class="label">Teléfono:</label>
+            <input type="text" id="phone" formControlName="phone" class="input" />
+          </div>
+          <div class="formGroup">
+            <label for="email" class="label">E-mail:</label>
+            <input type="email" id="email" formControlName="email" class="input" />
+          </div>
+        </div>
+        <div *ngIf="showPasswordFields">
+          <div class="formGroup">
+            <label for="password" class="label">Contraseña:</label>
+            <input type="password" id="password" formControlName="password" class="input" />
+          </div>
+          <div class="formGroup">
+            <label for="confirmPassword" class="label">Confirmar contraseña:</label>
+            <input type="password" id="confirmPassword" formControlName="confirmPassword" class="input" />
+          </div>
+        </div>
+        <p *ngIf="error$ | async" class="error">{{ error$ | async }}</p>
+        <div class="actionButtons">
+          <button *ngIf="!showPasswordFields" type="button" (click)="handleRegister()" class="registerButton">Siguiente</button>
+          <button *ngIf="showPasswordFields" type="button" (click)="handleSubmit()" class="registerButton"><a routerLink="auth/register">Registrarse</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="slider">
+    <div class="sliderInner">
+      <app-slider [images]="[
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg'
+]"></app-slider>
+    </div>
+  </div>
+</div>

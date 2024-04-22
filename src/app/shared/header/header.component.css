@@ -1,0 +1,100 @@
+.container {
+  min-width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    max-width:1500px;
+    
+  }
+  
+  /* Resto de tus estilos */
+  
+    
+    .profileAndWalletContainer {
+      display: flex;
+      align-items: center;
+    
+     
+    }
+    
+    .profileContainer,
+    .walletContainer {
+      display: flex;
+      align-items: center;
+      margin-right: 20px; /* Espacio entre los contenedores de perfil y billetera */
+    }
+    img{
+      width: 40px;
+      height: 40px;
+      
+    }
+    .wallet {
+      width: 20%;
+      display:flex;
+      justify-content: end;
+      justify-content: center;
+      gap: 5px;
+      margin-right: 10px;
+    }
+    .walletContent{
+      
+      display: flex;
+    }
+    
+    .profileImage,
+    .walletImage {
+      width: 50px;
+      height: 50px;
+      border-radius: 40%;
+      margin-right: 10px;
+    }
+    
+    .profileText {
+      font-size: 0.9vw;
+      white-space: nowrap;
+    }
+    .texBien{
+      font-size: 2vw;
+      font-weight: bold;
+    }
+    
+    .texnom{
+      font-size: 1.7vw;
+    }
+  
+    
+   
+    .connectButton,
+    .referralButton,
+    .logoutButton {
+      background-color: #d4780f;
+      color: #fff;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 0.9vw;
+    }
+    .connectButton{
+      width: 100%;
+    }
+  
+    
+    .connectButton:hover,
+    .referralButton:hover,
+    .logoutButton:hover {
+      background-color: #d4780f;
+    }
+    
+    .walletText {
+      font-size: 0.7vw;
+      margin-top: 5px; /* Espacio entre el botón y el texto */
+      white-space: nowrap;
+    }
+    
+    

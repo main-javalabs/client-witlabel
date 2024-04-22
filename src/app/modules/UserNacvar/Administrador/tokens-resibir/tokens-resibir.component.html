@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="firstRow">
+      <div class="navbar-admin">
+          <app-navbar-admin></app-navbar-admin>
+      </div>
+      <div class="header-admin">
+          <app-header-admin></app-header-admin>
+      </div>
+  </div>
+  <div class="secondRow">
+      <div class="column">
+          <div class="configuracion-criptos">
+              <h2 class="titulo-configuracion">Configuración de criptos a recibir</h2>
+              <div class="forms-container">
+                <div class="tokens-recibir">
+                  <h2>Tokens a recibir</h2>
+                </div>
+                <div class="form-container">
+                  <div class="form">
+                    <div class="agregar-token-container">
+                        <p class="agregar-token-titulo">Agregar token</p>
+                        <input type="text" class="input-token" placeholder="Nombre del token">
+                        <input type="text" class="input-token" placeholder="Dirección del token">
+                        <select name="" id="" class="select-token">
+                            <option value="">Red del token</option>
+                            <option value="ethereum">Ethereum</option>
+                            <option value="binance-smart-chain">Binance Smart Chain</option>
+                        </select>
+                        <select name="" id="" class="select-token">
+                            <option value="">Tipo de token</option>
+                            <option value="erc20">ERC-20</option>
+                            <option value="bep20">BEP-20</option>
+                        </select>
+                        <button class="boton-guardar">Guardar</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="modificar-token-container">
+                        <p class="modificar-token-titulo">Modificar Token</p>
+                        <input type="text" class="input-token" placeholder="Nombre del token">
+                        <input type="text" class="input-token" placeholder="Nueva dirección">
+                        <input type="text" class="input-token" placeholder="Nuevo tipo">
+                        <select name="" id="" class="select-token">
+                          <option value="">Tipo de token</option>
+                          <option value="erc20">ERC-20</option>
+                          <option value="bep20">BEP-20</option>
+                      </select>
+                        <button class="boton-guardar">Guardar</button>
+                    </div>
+                </div>
+
+                </div>
+
+              </div>
+          </div>
+      </div>
+      <div class="column">
+        <div class="columna">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Token</th>
+                <th>Dirección del Token</th>
+                <th>Oracle</th>
+                <th>Dirección del Oracle</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of datos">
+                <td>{{ item.id }}</td>
+                <td>{{ item.token }}</td>
+                <td>{{ item.direccionToken }}</td>
+                <td>{{ item.oracle }}</td>
+                <td>{{ item.direccionOracle }}</td>
+                <td>{{ item.tipo }}</td>
+                <td [ngStyle]="{'color': item.activo ? '#ffffff' : '#ffffff', 'background-color': item.activo ? '#4caf50' : '#ff0000'}">{{ item.activo ? 'Activo' : 'Inactivo' }}</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      
+</div>

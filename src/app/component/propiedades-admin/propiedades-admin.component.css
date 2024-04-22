@@ -1,0 +1,117 @@
+.outerContainer {
+    overflow-y: scroll;
+    width: 70vw;
+    height: 100vh;/* Puedes cambiar auto por hidden, scroll, o cualquier otro valor segú n tus necesidades */
+    margin-left: 1%;
+    margin-right: 3%;
+  }
+  .container{
+  
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5em;
+    overflow-x: hidden;
+  }
+  
+  .content,.tokenInfo,.propertyAddress,.saleInfo,.tokenSaleOptions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .content{
+    background-color: aqua;
+    font-size: 1.2vw;
+    padding: 1em 0 1em 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+  }
+  .propertyInfo{
+    margin: 0 1em;
+  }
+  
+  .propertyName{
+  
+    font-size: 1.2vw;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  
+  .addressText,.tokenPrice{
+    font-size: 1vw;
+    white-space: nowrap;
+  }
+  
+  .propertyImage{
+    width: 1em;
+    height: 1em;
+  }
+  
+  .imageWithBorderRadius{
+    border-radius: 15px;
+    
+  }
+  
+  .tokenDetails{
+    width:15em;
+    padding: 0.5em;
+    flex-direction: column;
+    border-left: 1px solid black; 
+    border-right: 1px solid black; 
+    margin-left: -1px;
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  .tokenValue{
+    font-size: 2vw;
+  }
+  
+  .buyButton{
+    background-color: #7FFF00;
+    padding: 1em;
+    font-size: 0.9vw;
+    white-space: nowrap;
+     text-align: center;
+     border-radius: 1em;
+  
+     
+  }
+  
+  .buyTokensButton{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:20%;
+    height: 100%;
+    
+  }
+  
+  
+  .tokensBoughtText{
+    font-size: 1vw;
+    white-space: nowrap;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .saleInfo{
+    width: 100%;
+    height: 5em;
+    padding: 1em;
+  }
+  
+  .tokenOption,.sellTokensButton{
+    font-size: 1vw;
+    white-space: nowrap;
+    background-color: white;
+    margin:0 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-align: center;
+    
+  }
+  
+  

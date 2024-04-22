@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="search-container">
+      <div class="search-input-container">
+        <input type="text" placeholder="Buscar usuario..." [(ngModel)]="searchTerm" (input)="handleSearchChange($event)" />
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </div>
+      <button (click)="toggleView()" class="toggle-button">
+        <fa-icon [icon]="showCards ? faThLarge : faStream"></fa-icon>
+        <span>{{ showCards ? 'Ver como Tabla' : 'Ver como Carta' }}</span>
+      </button>
+    </div>
+    <div class="user-container">
+      <ng-container *ngIf="showCards; else tableView">
+        <div *ngFor="let user of filteredUserData; let i = index" [ngClass]="'user-card ' + getUserCardColor(user.linkReferido)">
+          <div class="photo-container">
+            <img [src]="user.foto" alt="Foto de perfil" />
+          </div>
+          <h2>{{ user.nombre }} {{ user.apellido }}</h2>
+          <p>Correo: {{ user.correo }}</p>
+          <p>Wallet: {{ user.wallet }}</p>
+          <p>Teléfono: {{ user.telefono }}</p>
+          <p>Link de Referido: {{ user.linkReferido }}</p>
+          <p>opciones: <fa-icon [icon]="faEnvelope"></fa-icon> <fa-icon [icon]="faLock"></fa-icon> <fa-icon [icon]="faEye"></fa-icon></p>
+        </div>
+      </ng-container>
+      <ng-template #tableView>
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre y Apellido</th>
+              <th>Correo</th>
+              <th>Wallet</th>
+              <th>Teléfono</th>
+              <th>Link de Referido</th>
+              <th>opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUserData; let i = index" [ngClass]="getUserCardColor(user.linkReferido)">
+              <td><img [src]="user.foto" alt="Foto de perfil" /></td>
+              <td>{{ user.nombre }} {{ user.apellido }}</td>
+              <td>{{ user.correo }}</td>
+              <td>{{ user.wallet }}</td>
+              <td>{{ user.telefono }}</td>
+              <td>{{ user.linkReferido }}</td>
+              <td>
+                <fa-icon [icon]="faEnvelope"></fa-icon>
+                <fa-icon [icon]="faLock"></fa-icon>
+                <fa-icon [icon]="faEye"></fa-icon>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </div>
+  </div>

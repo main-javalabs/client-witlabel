@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="content">
+      <p class="paragraph">Historia de pagos</p>
+    </div>
+  
+    <div class="tableContainer">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Entrada de Token</th>
+            <th>Salida de Token</th>
+            <th>Rentas</th>
+            <th>Pagos de Comisión</th> <!-- Nueva columna -->
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pago of pagos">
+            <td>{{ pago.entradaToken }}</td>
+            <td>{{ pago.salidaToken }}</td>
+            <td>{{ pago.rentas }}</td>
+            <td>{{ pago.pagosComision }}</td> <!-- Nueva celda para Pagos de Comisión -->
+            <td>{{ pago.fecha }}</td>
+            <td>{{ pago.tipo }}</td>
+            <td>{{ pago.descripcion }}</td>
+          </tr>
+          <!-- Puedes agregar más filas según sea necesario -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,150 @@
+.container {
+   width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tablePhoto {
+    width: 50px; /* Ajusta el ancho de la foto */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  }
+  .user-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 2%;
+   
+  }
+  
+  
+  .userContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; /* Para permitir que las cartas se envuelvan en múltiples líneas */
+    justify-content: space-around; /* Opcional: para distribuir las cartas uniformemente */
+    
+  }
+  
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Para distribuir el espacio entre los elementos */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido principal */
+    width: 100%; /* Para ocupar todo el ancho disponible */
+  }
+  
+  .searchInputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .searchInputContainer input {
+    margin-right: 10px;
+  }
+  
+  .searchInputContainer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user-card {
+    background-color: #f5f5f5;
+    
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .user-card p{
+    border-bottom: 1px solid black;
+  }
+  
+  
+
+  
+  .table-view {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-view h2,
+  .table-view p {
+    margin: 5px 0;
+  }
+  
+  .user-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .user-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .user-table th {
+    background-color: #f2f2f2;
+  }
+  
+
+  
+  .user-table tr:hover {
+    background-color: #ddd;
+  }
+  
+
+  .toggleButton span{
+    white-space: nowrap;
+    margin: 0 10px;
+  }
+
+
+
+
+  /* Color rojo con opacidad para estado Inactivo */
+  .inactive {
+    background-color: rgba(255, 0, 0, 0.2); /* Rojo con 50% de opacidad */
+  }
+  
+  /* Color verde con opacidad para estado Activo */
+  .active {
+    background-color: rgba(0, 255, 0, 0.2); /* Verde con 50% de opacidad */
+  }
+  
+  /* Color amarillo con opacidad para estado En espera */
+  .pending {
+    background-color: rgba(255, 255, 0, 0.2); /* Amarillo con 50% de opacidad */
+  }
+  
+  .search-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+  }
+  .search-input-container{
+    margin-right: 30px;
+  }

@@ -1,0 +1,59 @@
+/* .container {
+    min-width:94vw;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    margin-left: 5%;
+  }
+  
+  .firstRow {
+    
+    grid-column: 1 / span 2; 
+    width: 94vw;
+  }
+  
+  .secondRow {
+   min-width:100%;
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    
+  }
+   */
+
+   .grid-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    height: 100%; /* Ocupa el 100% de la altura de la ventana */
+}
+
+.superposed-container {
+    background-color: lightblue;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.segundo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.tercero-container {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+    justify-content: space-around;
+    gap: 10px;
+    margin-left: 5%;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.tercero-content-1,
+.tercero-content-2 {
+    width: 100px;
+    height: 100px;
+    flex: 1; /* Que ocupe el 50% del espacio disponible */
+}

@@ -1,0 +1,13 @@
+<div class="container-7">
+    <div class="content">
+      <p class="paragraph" *ngIf="portfolioTitle">{{ portfolioTitle }}</p>
+      <p class="additional-paragraph" *ngIf="portfolioLabelText && portfolioValue">
+        <samp></samp>{{ portfolioLabelText }}
+        <samp class="sample">{{ portfolioValue }}</samp>
+      </p>
+    </div>
+    <div class="ng-content-container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  

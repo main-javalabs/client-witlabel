@@ -1,0 +1,153 @@
+/* PropertyCreationModal.module.css */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: opacity 0.3s ease; /* Transición de opacidad */
+}
+
+.modal {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+ 
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición de opacidad y transformación */
+  top: 50%; /* Centrado vertical */
+  left: -25%;
+  transform: translate(-50%, -50%) translateX(100%); /* Inicialmente fuera de la pantalla hacia la derecha */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra */
+}
+
+.modalContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modalSection {
+  margin-bottom: 30px; /* Aumenta el espacio entre secciones */
+}
+
+.modalTitle {
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1.5rem; /* Tamaño de fuente */
+}
+
+.propertyTypeButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.propertyTypeButton {
+  margin: 0 5px;
+}
+
+.inputField {
+  margin-bottom: 15px; /* Aumenta el espacio entre campos de entrada */
+  margin-right: 10px; /* Margen a la derecha */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(40% - 10px); /* Ancho del 40% del contenedor menos el margen derecho */
+  box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+.nextButton {
+  margin-top: auto; /* Alinea el botón en la parte inferior */
+  background-color: #d4780f; /* Color de fondo azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.publishButton {
+  background-color: #d4780f; /* Color de fondo verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.buttonContainer {
+  margin-top: 20px; /* Ajuste de margen superior para el contenedor del botón */
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: auto auto auto auto; /* 4 filas */
+  gap: 5px; /* Espacio entre elementos */
+}
+
+.inputField {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.customFileInput {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.customFileInput:hover {
+  background-color: #eaeaea;
+}
+
+.customFileInput input[type="file"] {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal {
+      position: fixed;
+      right: 10%;
+      max-width: 80%;
+  }
+}
+
+.modal.active {
+ 
+  transform: translate(-50%, -50%)  /* Animación de entrada: desde la derecha */
+}
+
+.modalOverlay.active {
+  opacity: 1; /* Reducir la opacidad del overlay */
+}
+
+.modal.closing {
+  transform: translate(-50%, -50%) translateX(100%); /* Animación de salida: hacia la izquierda */
+  opacity: 0; /* Ocultar el modal */
+}

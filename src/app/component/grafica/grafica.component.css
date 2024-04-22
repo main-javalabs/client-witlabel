@@ -1,0 +1,5 @@
+.chart-container {
+    width: 70vw; /* Haz que el contenedor ocupe todo el ancho disponible */
+    height: 50vh; /* Haz que el contenedor ocupe el 100% de la altura de la ventana gráfica */
+  }
+  

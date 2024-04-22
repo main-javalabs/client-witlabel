@@ -1,0 +1,18 @@
+<div class="slider">
+  <div class="slide-container">
+    <img *ngFor="let image of images.slice().reverse(); let i = index" 
+         [src]="image" 
+         alt="Slide" 
+         [class.active]="i === currentIndex" 
+         [class.prev]="i === (currentIndex + 1) % images.length" 
+         [class.next]="i === (currentIndex - 1 + images.length) % images.length"
+         (mousedown)="onMouseDownSlider($event, i)" 
+         (mouseup)="onMouseUpSlider()"
+         (mousemove)="onMouseMoveSlider($event)">
+  </div>
+  <div class="indicators">
+    <span *ngFor="let image of images; let i = index" 
+          [class.active]="i === currentIndex" 
+          (mousedown)="onMouseDownIndicator(i)"></span>
+  </div>
+</div>

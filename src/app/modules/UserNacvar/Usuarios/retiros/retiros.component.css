@@ -1,0 +1,42 @@
+.grid-container {
+  display: flex;
+}
+
+.superposed-container {
+  background-color: lightblue;
+}
+
+.segundo-container {
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tercero-container {
+  display: flex;
+  flex-direction: row; /* Cambiado a fila */
+  
+  justify-content: space-around;
+  gap: 10px;
+
+  margin-left: 5%;
+ 
+}
+
+.tercero-content-1 {
+  background-color: lightpink;
+  width: 100%;
+
+  flex: 1; /* Que ocupe el 50% del espacio disponible */
+}
+
+.tercero-content-2 {
+  background-color: lightblue;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  flex: 1; /* Que ocupe el 50% del espacio disponible */
+}

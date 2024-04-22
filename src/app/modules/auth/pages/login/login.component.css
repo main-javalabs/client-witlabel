@@ -1,0 +1,169 @@
+.container {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    color: #fff; 
+    background-color: #333;
+    max-width: 100vw;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ccc;
+  }
+  
+  .sliderInner {
+    height: auto;
+    width: auto;
+  }
+  
+  .sliderInner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .actionButtons {
+    margin-top: 10px;
+  }
+  
+  .actionButtons button {
+    margin-right: 10px;
+  }
+  
+  .actionButtons a {
+    margin-left: 10px;
+  }
+  
+  .login {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  .loginContent {
+    text-align: left;
+   
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Aplica negrita al texto "Bienvenido" */
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .loginForm {
+    text-align: left;
+  }
+  
+  .formGroup {
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+  }
+  
+  .loginButton,
+  .registerButton {
+    padding: 10px 20px;
+    background-color: #d4780f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .loginButton:hover,
+  .registerButton:hover {
+    background-color: #d4780f;
+  }
+  
+  .forgotPassword {
+    display: block;
+  }
+  
+
+
+  .modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal h2 {
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .modal button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #d4780f; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal button:last-child {
+    margin-right: 0;
+  }
+  
+  .modal button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+  }
+  
+  .modalBackground.active {
+    display: flex;
+  }
+  
+  .error-message {
+    color: red; /* Color del texto del mensaje de error */
+    font-size: 14px; /* Tamaño del texto del mensaje de error */
+    margin-top: 10px; /* Espacio superior del mensaje de error */
+  }
+  

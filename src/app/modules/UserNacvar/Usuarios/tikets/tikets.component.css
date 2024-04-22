@@ -1,0 +1,32 @@
+.container {
+  width: 94vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto auto; /* Tres filas de altura automática */
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+  gap: 10px;
+ 
+}
+
+.firstRow {
+  grid-column: 1 / span 3; /* Ocupa las tres columnas */
+}
+
+.secondRow {
+  width: 94vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+  margin-left: 5%;
+}
+
+.thirdRow {
+  width: 94vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+}
+
+.column{
+  overflow-y: scroll;
+}

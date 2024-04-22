@@ -1,0 +1,58 @@
+/* HistorialPagos.module.css */
+
+.container {
+    width: 65.8vw;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    padding: 0.9vw;
+  }
+  
+  .additionalParagraph {
+    border: 1px solid #000;
+    padding: 0.2em;
+  }
+  
+  .paragraph,
+  .additionalParagraph {
+    font-size: 1.5vw;
+  }
+  
+  .paragraph,
+  .sample {
+    font-weight: bold;
+  }
+  
+  .sample {
+    font-size: 2vw;
+  }
+  
+  /* Estilos para la tabla */
+  .tableContainer {
+    margin-top: 20px; /* Espacio entre el texto y la tabla */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: left;
+    
+  }
+  
+  .table th {
+    background-color: #333;
+    font-size: 1.2vw; /* Tamaño de fuente para los encabezados de la tabla */
+    color: white; /* Color de texto para las celdas de la tabla */
+  }
+  

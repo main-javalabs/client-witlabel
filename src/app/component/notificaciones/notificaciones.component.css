@@ -1,0 +1,55 @@
+.container {
+    width: 30vw;
+    padding: 20px;
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px al componente */
+  }
+  
+  .details {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .section1 {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .section2 {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .circle {
+    width: 10px; /* Ancho del punto */
+      height: 10px; /* Altura del punto */
+      background-color: black; /* Color del punto */
+      border-radius: 50%; /* Forma redondeada para que sea un círculo */
+      display: inline-block; 
+    
+  }
+  
+  .text {
+    padding-left: 10px;
+  }
+  
+  .date {
+    padding-left: 10px;
+  }
+  
+  .buttons {
+    text-align: right;
+  }
+  
+  .button {
+    margin-left: 5px;
+  }
+  

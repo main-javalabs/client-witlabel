@@ -1,0 +1,71 @@
+<!-- property-creation-modal.component.html -->
+
+<div class="modalOverlay" [ngClass]="{'active': isActive}">
+  <div class="modal" [ngClass]="{'active': isActive, 'closing': isClosing}">
+    <div class="modalContent">
+      <div *ngIf="step === 1" class="modalSection">
+        <h2 class="modalTitle">¡Estupendo, vamos por ello!</h2>
+        <p>Antes de completar el proceso de publicación, asegúrese de seguir los siguientes pasos:</p>
+        <button (click)="nextStep()"><img src="../../../assets//png//NFT.png" alt="NFT"><samp>NFT</samp></button>
+      </div>
+      <div *ngIf="step === 2" class="modalSection">
+        <h2 class="modalTitle">¿Qué tipo de propiedad estás listo para tokenizar?</h2>
+        <div class="propertyTypeButtons">
+          <button class="propertyTypeButton" (click)="handlePropertyTypeSelection('Casa')"><img src="../../../assets//png/Casa.png" alt="Casa"><samp>Casa</samp></button>
+          <button class="propertyTypeButton" (click)="handlePropertyTypeSelection('Oficina')"><img src="../../../assets//png/oficina.png" alt="Oficina"><samp>Oficina</samp></button>
+          <button class="propertyTypeButton" (click)="handlePropertyTypeSelection('Local')"><img src="../../../assets//png/local.png" alt="Local"><samp>Local</samp></button>
+          <button class="propertyTypeButton" (click)="handlePropertyTypeSelection('Edificio')"><img src="../../../assets//png/edificio.png" alt="Edificio"><samp>Edificio</samp></button>
+        </div>
+      </div>
+      <div *ngIf="step === 3" class="modalSection projectDataSection">
+        <h2 class="modalTitle">Datos del proyecto inmobiliario</h2>
+        <input type="text" name="projectName" [(ngModel)]="projectData.projectName" (change)="handleProjectDataChange($event)" class="inputField" placeholder="¿En qué país se encuentra?" />
+        <input type="text" name="location" [(ngModel)]="projectData.location" (change)="handleProjectDataChange($event)" class="inputField" placeholder="¿En qué departamento se ubica?" />
+        <input type="text" name="size" [(ngModel)]="projectData.size" (change)="handleProjectDataChange($event)" class="inputField" placeholder="¿En qué ciudad está ubicada?" />
+        <input type="text" name="rooms" [(ngModel)]="projectData.rooms" (change)="handleProjectDataChange($event)" class="inputField" placeholder="¿Cuál es la dirección de la propiedad?" />
+        <input type="text" name="bathrooms" [(ngModel)]="projectData.bathrooms" (change)="handleProjectDataChange($event)" class="inputField" placeholder="Inserta aquí el Link de Google Map" />
+        <div class="buttonContainer">
+          <button class="nextButton" (click)="nextStep()">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Agrega aquí los otros pasos del formulario -->
+
+      <div *ngIf="step === 4" class="modalSection">
+        <h2 class="modalTitle">¡Estupendo, vamos por ello!</h2>
+        <p>Datos del proyecto inmobiliario</p>
+        <br />
+        <div class="inputContainer">
+          <input type="text" name="extra1" class="inputField extra1" placeholder="Nombre de la propiedad" />
+          <div class="labeledInput">
+            <label for="extra2">Adjuntar imagen para portada:</label>
+            <input type="file" id="extra2" name="extra2" class="inputField" />
+          </div>
+          <input type="text" name="extra4" class="inputField" placeholder="Descripción del proyecto" />
+          <input type="text" name="extra5" class="inputField" placeholder="Rentabilidad Estimada (%)*" />
+          <div class="labeledInput">
+            <label for="extra3">Adjuntar archivo:</label>
+            <input type="file" id="extra3" name="extra3" class="inputField" />
+          </div>
+          <input type="text" name="extra6" class="inputField" placeholder="¿Es su proyecto nuevo o usado?" />
+          <input type="text" name="extra7" class="inputField" placeholder="Estado" />
+        </div>
+        <div>
+          <button class="nextButton" (click)="nextStep()">Siguiente</button>
+        </div>
+      </div>
+
+      <div *ngIf="step === 5" class="modalSection">
+        <h2 class="modalTitle">¡Estupendo, vamos por ello!</h2>
+        <p>Selecciona tu imagen de portada:</p>
+        <input type="file" name="coverImage" class="inputField" accept="image/*" />
+        <div class="buttonContainer">
+          <button class="publishButton" (click)="handlePublish()">Publicar</button>
+
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

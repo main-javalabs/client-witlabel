@@ -1,0 +1,57 @@
+<div class="outerContainer">
+    <div class="container-2">
+      <div class="content">
+            <div class="imageContainer">
+            <img [src]="imageUrl" alt="propiedad" class="imageWithBorderRadius" />
+            </div>
+    
+            <div class="propertyInfo">
+            <h2 class="propertyName">{{ propertyName }}</h2>
+            <div class="propertyAddress">
+                <img src="/#" alt="icono" class="propertyImage" />
+                <p class="addressText">{{ addressText }}</p>
+            </div>
+    
+            <p class="tokenPrice">{{ tokenPrice }}</p>
+            </div>
+    
+            <div class="tokenInfo">
+            <div class="tokenDetails">
+                <p class="tokenLabel">Mis Tokens</p>
+                <span class="tokenValue">{{ misTokens }}</span>
+            </div>
+            <div class="tokenDetails">
+                <p class="tokenLabel">Rentabilidad Estimada</p>
+                <span class="tokenValue">{{ rentabilidadEstimada }}</span>
+            </div>
+            <div class="tokenDetails">
+                <p class="tokenLabel">Rendimientos Acumulados</p>
+                <span class="tokenValue">{{ rendimientosAcumulados }}</span>
+            </div>
+            </div>
+    
+            <div class="buyTokensButton">
+            <button class="buyButton">COMPRAR MÁS TOKEN</button>
+            </div>
+      </div>
+  
+      <div class="saleInfo">
+            <div class="tokensBought">
+            <p class="tokensBoughtText">{{ tokensBoughtText }}</p>
+            </div>
+    
+            <div class="tokenSaleOptions">
+            <div class="tokenOption">
+                <img src="" alt="" class="tokenImage" />
+                <button class="tokenButton">¿Cuántos tokens deseas vender?</button>
+            </div>
+            <div class="tokenOption">
+                <img src="" alt="" class="tokenImage" />
+                <button class="tokenButton">¿A qué precio te gustaría vender?</button>
+            </div>
+            <button class="sellTokensButton">SOLICITAR REVENTA</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  

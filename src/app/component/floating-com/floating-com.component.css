@@ -1,0 +1,137 @@
+
+
+.floatingComponent {
+    position: fixed;
+    top: 500px; /* Ajusta la distancia desde la parte superior */
+    right: 50px; /* Ajusta la distancia desde la derecha */
+    background-color: transparent;
+    border-radius: 8px;
+  }
+  
+  .userIcon {
+    
+    transition: left 0.5s ease; /* Agrega una transición suave para la animación */
+    position: absolute;
+    top: 60%;
+    left: -50px; /* Ajusta la posición inicial de la imagen del usuario */
+    transform: translateY(-10%) translateX(-40%);
+    z-index: 8;
+  }
+
+  .userIcon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .obalos {
+    transition: width 0.5s ease, right 0.5s ease, height 0.5s ease; /* Agrega una transición suave para la animación */
+    width: 25px; /* Ancho inicial del óvalo */
+    height: 100px; /* Altura inicial del óvalo */
+    background-color: white; /* Color de fondo del óvalo */
+    border-radius: 10px; /* Borde redondeado del óvalo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del óvalo */
+    position: absolute; /* Fija la posición del óvalo */
+    top: 50%; /* Ajusta la posición vertical del óvalo */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+  }
+  
+  .expanded .obalos {
+    width: 250px; /* Ancho del óvalo cuando está expandido */
+    height: 150px; /* Altura del óvalo cuando está expandido */
+    right: 25px; /* Alinea el óvalo a la izquierda */
+  }
+  
+  .expanded .userIcon {
+    
+    left: -260px; /* Ajusta la posición de la imagen del usuario cuando el óvalo está expandido */
+    z-index: 5;
+  }
+  
+  .text {
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajusta la transición de opacidad y transformación */
+    position: absolute;
+    top: 40%; /* Modifica la posición vertical del texto */
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 25px;
+    margin-left: 15px; /* Ajusta el padding izquierdo del texto */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto hacia la izquierda */
+    justify-content: flex-start;
+  }
+  
+  .expanded .text {
+    opacity: 1; /* Hace visible el texto cuando el óvalo está expandido */
+    transform: translateY(-50%); /* Mantiene el texto centrado verticalmente cuando está expandido */
+  }
+  
+  .text h1 {
+    font-size: 12px; /* Ajusta el tamaño del título */
+    margin: 0; /* Elimina el margen superior e inferior del título */
+  }
+  
+  .text p {
+    font-size: 8px; /* Ajusta el tamaño del párrafo */
+    margin: 5px 0; /* Ajusta el margen superior e inferior del párrafo */
+  }
+  
+  .text strong {
+    font-weight: bold; /* Establece la negrita */
+    color: #333; /* Cambia el color del texto */
+    font-size: 16px;
+  }
+  
+  .connected {
+    color: #4caf50; /* Color verde claro */
+    font-weight: bold;
+  }
+  
+  .greenCircle {
+    display: inline-block;
+    width: 10px; /* Tamaño del círculo */
+    height: 10px;
+    background-color: #4caf50; /* Color verde claro */
+    border-radius: 50%; /* Forma de círculo */
+    margin-right: 5px; /* Espacio entre el círculo y el texto */
+  }
+  
+  .contentWrapper {
+    transition: margin-bottom 0.5s ease-in-out; /* Ajusta la duración y la función de temporización de la transición */
+    margin-bottom: 90px; /* Puedes ajustar el valor según sea necesario */
+  }
+  
+  .expanded .contentWrapper {
+    margin-bottom: 150px; /* Ajusta la distancia cuando el óvalo está expandido */
+  }
+  
+  .optionsContainer {
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajusta la duración y la función de temporización de la transición */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128);
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 10px; /* Radio de borde en la esquina inferior izquierda */
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    opacity: 0; /* Inicialmente oculta el contenedor de opciones */
+    transform: translateY(50px); /* Mueve el contenedor hacia abajo */
+  }
+  
+  .expanded .optionsContainer {
+    opacity: 1; /* Muestra el contenedor de opciones cuando el óvalo está expandido */
+    transform: translateY(-90%);
+  }
+
+  .optionItem {
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+  }
+  
+  .optionItem:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cambia el color de fondo al hacer hover */
+  }
+  

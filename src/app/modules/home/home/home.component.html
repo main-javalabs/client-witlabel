@@ -1,0 +1,66 @@
+<div class="container">
+  <app-header-hom></app-header-hom>
+  <br><br>
+
+    <div class="horizontalContainer">
+      <div class="slider">
+      <app-slider [images]="[
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+  'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg'
+]"></app-slider>
+      </div>
+      
+      <div class="propertyInfo">
+        <div class="propertyInfoContent">
+          <p class="propertyInfoText">Propiedad Tokenizada</p>
+          <h1 class="propertyInfoTitle">Nombre Propiedad</h1>
+          <p class="propertyInfoText">Dirección: Lorem ipsum dolor sit amet </p>
+        </div>
+  
+        <div class="propertyInfoContent">
+          <p class="propertyInfoText">Descripción larga: Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+        </div>
+  
+        <div class="investment">
+          <div>
+            <p class="investmentText">Inversión por token</p>
+            <h1 class="investmentAmount">500 USD</h1>
+          </div>
+  
+          <div class="investmentContent">
+            <p class="investmentText">Inversión total de la propiedad</p>
+            <h1 class="investmentAmount">3.000.000.000 COP</h1>
+          </div>
+        </div>
+  
+        <div class="buttonsContainer">
+          <button class="button">Monto Total</button>
+          <button class="button">Método de pago</button>
+          <button class="button">COMPRAR AHORA</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bottomSection">
+      <div class="bottomContent">
+        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+        <button class="downloadButton">Descargar PDF</button>
+      </div>
+    </div>
+<br><br>
+
+<div class="box">
+<div *ngFor="let propiedad of propiedades">
+  <app-cartasdepropi 
+    
+    [direccion]="propiedad.direccion"
+    [inversionPorToken]="propiedad.inversionPorToken"
+    [inversionTotal]="propiedad.inversionTotal"
+    [rentabilidadEstimada]="propiedad.rentabilidadEstimada"
+    [urlImagenFondo]="propiedad.imageUrl"> <!-- Cambiar imageUrl a urlImagenFondo -->
+  </app-cartasdepropi>
+</div>
+</div>
+  </div>
+  

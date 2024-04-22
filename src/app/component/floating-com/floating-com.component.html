@@ -1,0 +1,54 @@
+<div class="floatingComponent" [class.expanded]="expanded" (click)="toggleExpand()">
+  <div class="userIcon">
+    <img src="https://th.bing.com/th/id/OIP.2cOe4ej-roywKGJXcvQQUQHaF7?rs=1&pid=ImgDetMainruta-a-la-imagen-del-usuario" alt="Usuario">
+  </div>
+  <div class="obalos">
+    <div class="contentWrapper">
+      <div *ngIf="expanded" class="text">
+        <h1><strong>¡Bienvenido, Andrés!</strong></h1>
+        <p>
+          <span class="greenCircle"></span>
+          <span class="connected">CONECTADO</span> | Última conexión el 1 Feb 2024
+        </p>
+        <div class="whalet">
+          <div><p>Ad3345ydg6a6789pokah1jhd73db34fws</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="optionsContainer">
+      <div class="optionItem" (click)="selectOption('editarPerfil'); $event.stopPropagation()">
+        <img src="" alt="">
+        <span class="option">Editar perfil</span>
+      </div>
+      <div *ngIf="selectedOption === 'editarPerfil'">
+        <!-- Aquí colocas el contenido del módulo de 'Editar perfil' -->
+        <!-- Por ejemplo, podrías usar un componente específico para este módulo -->
+        <!-- <app-EditarPerfil></app-EditarPerfil> -->
+      </div>
+    
+      <div class="optionItem" (click)="selectOption('editarHome'); $event.stopPropagation()">
+        <img src="" alt="">
+        <span class="option">Editar Home</span>
+      </div>
+      <div *ngIf="selectedOption === 'editarHome'">
+        <!-- Aquí colocas el contenido del módulo de 'Editar Home' -->
+        <!-- <app-EditarHome></app-EditarHome> -->
+      </div>
+    
+      <div class="optionItem" (click)="selectOption('soporteTecnico'); $event.stopPropagation()">
+        <img src="" alt="">
+        <span class="option">Soporte Técnico</span>
+      </div>
+      <div *ngIf="selectedOption === 'soporteTecnico'">
+        <!-- Aquí colocas el contenido del módulo de 'Soporte Técnico' -->
+        <!-- <app-SoporteTecnico></app-SoporteTecnico> -->
+      </div>
+    </div>
+    
+
+    <div class="bellIcon">
+      <!-- Aquí deberías colocar el icono de la campana -->
+    </div>
+  </div>
+</div>

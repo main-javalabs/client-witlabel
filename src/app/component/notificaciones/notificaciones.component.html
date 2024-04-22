@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="details">
+      <div class="section1">
+        <h2 class="title">Notificaciones</h2>
+      </div>
+      <div class="section2">
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let notificacion of notificaciones">
+              <td class="circle" [style.backgroundColor]="'red'"></td>
+              <td class="text">{{ notificacion }}</td>
+              <td class="date">01/01/2024</td>
+              <td class="buttons">
+                <button class="button">
+                  <fa-icon [icon]="faEnvelope"></fa-icon>
+                </button>
+                <button class="button">
+                  <fa-icon [icon]="faTrash"></fa-icon>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

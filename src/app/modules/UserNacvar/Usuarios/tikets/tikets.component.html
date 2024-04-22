@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="firstRow">
+    <app-header></app-header>
+    <app-navbar-user></app-navbar-user>
+  </div>
+  <div class="secondRow">
+    <div class="column">
+      <app-datos-usuario></app-datos-usuario>
+    </div>
+    <div class="column">
+    <app-notificaciones></app-notificaciones>
+    </div>
+    <div class="column ">
+      <div *ngFor="let proyecto of proyectosTokenComprado">
+        <app-tokens-comprados 
+          [propertyName]="proyecto.titulo"
+          [propertyDescription]="proyecto.descripcion"
+          [propertyPrice]="proyecto.tokenPrice"
+          [priceDescription]="proyecto.tokensBoughtText"
+          [rentabilityTitle]="proyecto.rentabilidadEstimada"
+          [rentabilityDescription]="proyecto.rendimientosAcumulados"
+          [imageUrl]="proyecto.imageUrl">
+        </app-tokens-comprados>
+      </div>
+    </div>
+  </div>
+</div>

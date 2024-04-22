@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="status">
+      <div class="availability-imagen" [style.background-image]="'url(' + urlImagenFondo + ')'">
+        <div class="status-message">
+          <p class="available">DISPONIBLE</p>
+        </div>
+        <div class="additional-info">
+          <div class="additional-info-text">
+            <p>¡Actúa Rápido Antes de que se Agoten!</p>
+          </div>
+          <div class="additional-info-span">
+            <span>¡El 90% de los Tokens ya Han Sido Vendidos!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="property-details">
+      <div class="name-address">
+        <h2>Nombre Propiedad</h2>
+        <p>Dirección: {{ direccion }}</p>
+      </div>
+  
+      <div class="investment-per-token">
+        <p>Inversión por token</p>
+        <h2>{{ inversionPorToken }}</h2>
+      </div>
+  
+      <div class="total-investment">
+        <p>Inversión total de la propiedad</p>
+        <h2>{{ inversionTotal }}</h2>
+      </div>
+  
+      <div class="profitability">
+        <div class="title">
+          <h2>Rentabilidad Estimada (%)</h2>
+        </div>
+        <div class="value">
+          <h2>Rentabilidad Estimada</h2>
+          <samp>{{ rentabilidadEstimada }}</samp>
+         
+        </div>
+      </div>
+    </div>
+  
+    <div class="buy-button">
+      <button>COMPRAR AHORA</button>
+    </div>
+</div>

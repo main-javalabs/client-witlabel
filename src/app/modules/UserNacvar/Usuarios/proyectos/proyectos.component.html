@@ -1,0 +1,48 @@
+<div class="grid-container">
+  <div class="superposed-container">
+    <app-navbar-user></app-navbar-user>
+  </div>
+  
+  <div class="segundo-container">
+    <app-header></app-header>
+
+    <div class="tercero-container">
+      <app-token-comprado 
+        [portfolioTitle]="'Mi Portafolio'" 
+        [portfolioValue]="'xxx.xxUSD'" 
+        [portfolioLabelText]="'Valor Total del Portafolio:'">
+        
+        <ng-container *ngFor="let proyecto of proyectos">
+          <app-token-holder 
+            [propertyName]="proyecto.titulo"
+            [addressText]="proyecto.descripcion"
+            [tokenPrice]="proyecto.tokenPrice"
+            [tokensBoughtText]="proyecto.tokensBoughtText"
+            [misTokens]="proyecto.misTokens"
+            [rentabilidadEstimada]="proyecto.rentabilidadEstimada"
+            [rendimientosAcumulados]="proyecto.rendimientosAcumulados"
+            [imageUrl]="proyecto.imageUrl">
+          </app-token-holder>
+        </ng-container>
+      
+      </app-token-comprado>
+      
+      <div class="tercero-content-2">
+        <div *ngFor="let proyecto of proyectosTokenComprado">
+          <app-tokens-comprados 
+            [propertyName]="proyecto.titulo"
+            [propertyDescription]="proyecto.descripcion"
+            [propertyPrice]="proyecto.tokenPrice"
+            [priceDescription]="proyecto.tokensBoughtText"
+            [rentabilityTitle]="proyecto.rentabilidadEstimada"
+            [rentabilityDescription]="proyecto.rendimientosAcumulados"
+            [imageUrl]="proyecto.imageUrl">
+          </app-tokens-comprados>
+        </div>
+      </div>
+      
+    </div> 
+  </div> 
+  
+</div> 
+

@@ -1,0 +1,45 @@
+.container {
+    width:100%;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title{
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 2vw;
+  }
+
+ 
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    }
+
+   
+    
+    
+    .section2{
+        border: solid black 1px;
+        padding: 2em;
+        border-radius: 1em;
+    }
+  
+ 
+  
+  .description {
+    padding-left: 10px; /* Añade un poco de espacio entre la etiqueta y la descripción */
+  }

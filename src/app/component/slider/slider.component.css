@@ -1,0 +1,60 @@
+.slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.slide-container {
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+  margin-right: 30px;
+  
+  
+}
+
+.slide-container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  max-height: 100%; /* Ajusta la altura máxima de la imagen */
+  transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out;
+  border-radius: 20px;
+}
+
+.slide-container img.active {
+  opacity: 1;
+}
+
+.slide-container img.prev {
+  transform: translate(-150%, -50%); /* Mueve la imagen hacia la izquierda */
+}
+
+.slide-container img.next {
+  transform: translate(50%, -50%); /* Mueve la imagen hacia la derecha */
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background-color: #333; /* Color de fondo tenue */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background-color: #d4780f; /* Color de fondo oscuro para el punto activo */
+}

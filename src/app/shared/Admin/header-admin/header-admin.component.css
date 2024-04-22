@@ -1,0 +1,80 @@
+.container {
+    min-width:100%;
+      display: flex;
+      align-items: center;
+      justify-content:flex-end ;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+     
+    }
+    
+    .profileAndWalletContainer {
+      display: flex;
+      align-items: center;
+    }
+    
+    .profileContainer,
+    .walletContainer {
+      display: flex;
+      align-items: center;
+      margin-right: 20px; /* Espacio entre los contenedores de perfil y billetera */
+    }
+    
+    .profileImage,
+    .walletImage {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .profileText {
+      font-size: 0.9vw;
+      white-space: nowrap;
+    }
+    .texBien{
+      font-size: 2vw;
+      font-weight: bold;
+    }
+    
+    .texnom{
+      font-size: 1.7vw;
+    }
+  
+    
+   
+    .connectButton,
+    .referralButton,
+    .logoutButton {
+      background-color: #d4780f;
+      color: #fff;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 0.9vw;
+    }
+    .connectButton{
+      width: 100%;
+    }
+  
+    
+    .connectButton:hover,
+    .referralButton:hover,
+    .logoutButton:hover {
+      background-color: #d4780f;
+    }
+    
+    .walletText {
+      font-size: 0.7vw;
+      margin-top: 5px; /* Espacio entre el botón y el texto */
+    }
+    
+    @media (max-width: 768px) {
+      .profileText {
+        display: none; /* Oculta el texto del perfil en pantallas más pequeñas */
+      }
+    }
+    

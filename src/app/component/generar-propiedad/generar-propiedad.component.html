@@ -1,0 +1,36 @@
+<div class="container">
+  <div>
+      <p class="paragraph">¿Tienes una nueva oportunidad de tokenizar una propiedad?</p>
+      <h1 class="heading">¡Vamos por ello!</h1>
+      <div>
+          <button (click)="openModal()" class="button">Subir Propiedad</button>
+          <app-modal *ngIf="modalOpen" (closeModalEvent)="closeModal()"></app-modal>
+      </div>
+  </div>
+  <div>
+      <br />
+      <p class="paragraph">Otros servicios</p>
+      <br />
+      <div>
+          <div>
+              <div><img src="#" alt="" /></div>
+              <button class="button">Marketing Digital</button>
+          </div>
+          <br />
+          <div>
+              <div><img src="#" alt="" /></div>
+              <button class="button">Email Marketing</button>
+          </div>
+          <br />
+          <div>
+              <div><img src="#" alt="" /></div>
+              <button class="button">Diseño Redes Sociales</button>
+          </div>
+          <br />
+          <div>
+              <div><img src="#" alt="" /></div>
+              <button class="button">Creación de Contenidos</button>
+          </div>
+      </div>
+  </div>
+</div>

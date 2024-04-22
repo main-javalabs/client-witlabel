@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="login">
+    <div class="loginContent">
+      <img src="../../../../../assets/SVG/Referencia.svg" alt="Logo" class="logo" />
+      <h2 class="title">¡Bienvenido, Andrés!</h2>
+      <p class="subtitle">Tu Historia Inmobiliaria Continúa, Ingresa y Sorprénde</p>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="loginForm">
+        <div class="formGroup">
+          <label for="username" class="label">Usuario:</label>
+          <input type="text" id="username" formControlName="username" class="input" />
+          <p *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="error">Usuario requerido</p>
+        </div>
+        <div class="formGroup">
+          <label for="password" class="label">Contraseña:</label>
+          <input type="password" id="password" formControlName="password" class="input" />
+          <p *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">Contraseña requerida</p>
+        </div>
+        <div class="actionButtons">
+          <button type="submit" class="loginButton">Iniciar sesión</button>
+          <a routerLink="/auth/register"><button type="button" class="registerButton">Registrarse</button></a>
+        </div>
+        <a routerLink="/auth/reset-password" class="forgotPassword">¿Olvidaste tu contraseña?</a>
+      </form>
+      <!-- Mensaje de error -->
+      <div *ngIf="error$ | async as error" class="error-message">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+  <div class="slider">
+    <!-- Aquí va el componente slider -->
+    <app-slider [images]="[
+      'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+      'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg',
+      'https://www.arquimaster.com.ar/realestate/Images/square_laplata3b.jpg'
+    ]"></app-slider>
+  </div>
+
+  <!-- Modal -->
+  <div class="modalBackground" [ngClass]="{ active: modalActive }">
+    <div class="modal">
+      <h2>Selecciona a qué ruta de la página deseas ingresar</h2>
+      <button (click)="redirectUser()">Usuario</button>
+      <button (click)="redirectAdmin()">Administrador</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
